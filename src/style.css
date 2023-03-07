@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    background-color: rgb(212, 243, 221);
+}
+
+.signin-div, .addbook-div {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 10px;
+    min-height: fit-content;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.signin-div > h1 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+form > label, .addbook-div > label {
+    text-align: left;
+}
+
+form > input, .addbook-div> input, .update-user-div>input {
+    border-radius: 5px;
+    border: 1px solid grey;
+    line-height: 1.5rem;
+    text-indent: 4px;
+}
+
+form > button, .addbook-div>button, .update-user-div>button, .google-button {
+    margin: 15px auto;
+    width: 50%;
+    align-self: center;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: rgb(10, 104, 65);
+    color: white;
+    font-size: 1rem;
+    padding: 8px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.error {
+    border-radius: 5px;
+    background-color: rgb(224, 172, 172);
+    color: red;
+    padding: 8px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+nav {
+    z-index: 1;
+    padding: 8px 15px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(161, 226, 199, 0.65);
+    color: rgb(1, 53, 31);
+}
+
+nav >h2 {
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+} 
+
+nav > h2:hover {
+    transform: scale(105%);
+}
+
+nav>h2>a:visited {
+    color: rgb(1, 53, 31);
+}
+
+.image-small {
+    background-color: rgb(209, 228, 220);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid rgb(1, 53, 31);
+}
+
+nav > button {
+    min-width: 100px;
+    background-color: rgb(1, 53, 31);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    text-transform: uppercase;
+}
+
+nav>button:hover {
+    background-color: rgb(1, 53, 31,0.8);
+    transform: scale(102%);
+}
+
+nav > button > a {
+    color: white;
+}
+
+.link {
+    padding: 5px;
+    border-radius: 3px 5px;
+    color: rgb(1, 53, 31);
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.books-section {
+    width: 100%;
+    padding: 10px;
+    color: rgb(1, 53, 31);
+}
+
+.books-section > h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.books-section > button {
+    z-index: 2;
+    position: sticky;
+    top: 80px;
+    left: 90%;
+    width: 65px;
+    height: 65px;
+    border: none;
+    border-radius: 50%;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    background-color: rgb(1, 53, 31);
+    color: white;
+}
+
+.books-section>button>a {
+    color: white;
+}
+
+.books-section>button:hover {
+    background-color: rgb(1, 53, 31,0.8);
+    transform: scale(105%);
+}
+
+.books {
+    margin-top: 20px;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fill, 400px);
+    gap: 25px;
+}
+
+.book {
+    position: relative;
+    max-width: 400px;
+    height: 250px;
+    background-color: rgb(212, 243, 221);
+    border: 1px solid rgb(142, 244, 171);
+    border-radius: 10px;
+    padding: 15px;
+    color: rgb(1, 53, 31);
+    transition: linear box-shadow 0.5s;
+}
+
+.book:hover {
+    transform: scale(101%);
+    box-shadow: 1px 5px 5px 5px rgb(1, 53, 31);
+}
+
+.book > h3 {
+    font-size: 1.75rem;
+    text-transform: uppercase;
+}
+
+
+.book > .description {
+    font-style: italic;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 20px;
+}
+
+.book > p:last-of-type {
+    position: absolute;
+    bottom: 10px;
+}
+
+.addbook-div {
+    margin: 50px auto;
+}
+
+.addbook-div > textarea {
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.user-section {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.user-section > button {
+    padding: 10px;
+    background-color: rgb(1, 53, 31);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.update-user-div {
+    max-width: 600px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="file"] {
+    border: none;
+    
+}
+
+.book-item-div {
+    margin-top: 15px;
+}
+
+.book-item-div> div {
+    border: none;
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 15px;
+}
+
+.book-item-div > .book:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.book-item-div > .comments {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.comments > p {
+    font-size: 1.15rem;
+    font-style: italic;
+}
+
+.comment {
+    position: relative;
+    background-color: rgb(225, 251, 240);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.comment > span {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.comment > span:last-of-type {
+    position: absolute;
+    right: 5px;
+    font-weight: 400;
+}
+
+.comment > p {
+    margin-top: 8px;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.new-comment-div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.new-comment-div > textarea {
+    padding: 3px;
+    border: 1px solid rgb(212, 243, 221);
+    border-radius: 4px;
+    background-color: rgb(225, 251, 240);
+}
+
+.new-comment-div>textarea:focus-within {
+    outline: none;
+}
+
+.new-comment-div> button {
+    margin: 5px auto;
+    width: 50%;
+    background-color: rgb(1, 53, 31);
+    color:white;
+    text-transform: uppercase;
+    padding: 5px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
