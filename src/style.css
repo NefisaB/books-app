@@ -274,6 +274,10 @@ input[type="file"] {
     box-shadow: none;
 }
 
+.book-item-div .book .description {
+    white-space: normal;
+}
+
 .book-item-div > .comments {
     display: flex;
     flex-direction: column;
